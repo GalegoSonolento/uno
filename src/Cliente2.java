@@ -17,6 +17,8 @@ public class Cliente2 {
         String escritaServ;
         int valorCarta;
 
+        System.out.println("Wait for your oponent...");
+
         while(true) {
 
             //Primeira mensagem
@@ -62,7 +64,7 @@ public class Cliente2 {
                     escritaServ = doUsuario.readLine() + "\n";
                     paraServidor.writeBytes(escritaServ + '\n');
                     paraServidor.flush();
-                    System.out.println("resp quando escreve cor");
+                    //System.out.println("resp quando escreve cor");
                     System.out.println(doServidorObj.readObject());
                 }
             }
@@ -71,6 +73,8 @@ public class Cliente2 {
                 socketCliente.close();
                 break;
             }
+
+            System.out.println("Wait for your oponent...");
         }
     }
 
