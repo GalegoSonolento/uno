@@ -22,18 +22,18 @@ public class Cliente1 {
             //Primeira mensagem
 
             StringBuilder mensagemInicial = (StringBuilder) doServidorObj.readObject();
-            if (mensagemInicial.toString().equals("Bye bye")) {
-                System.out.println("Bye bye");
+            if (mensagemInicial.toString().equals("Até mais")) {
+                System.out.println("Até mais");
                 socketCliente.close();
                 break;
             }
-            else if (mensagemInicial.toString().equals("player1")) {
-                System.out.println("Player 1 wins :)");
+            else if (mensagemInicial.toString().equals("jogador1")) {
+                System.out.println("Jogador 1 vence :)");
                 socketCliente.close();
                 break;
             }
-            else if (mensagemInicial.toString().equals("player2")) {
-                System.out.println("Player 2 wins ;)");
+            else if (mensagemInicial.toString().equals("jogador2")) {
+                System.out.println("Jogador 2 vence ;)");
                 socketCliente.close();
                 break;
             }
@@ -52,7 +52,7 @@ public class Cliente1 {
 
             //Checande se entra as cartas especiais e precisa colocar a cor
             String acao = doServidor.readLine();
-            if (acao.equals("yes")){
+            if (acao.equals("sim")){
                 String step = doServidor.readLine();
                 //System.out.println(step);
                 valorCarta = Integer.parseInt(step);
@@ -66,13 +66,13 @@ public class Cliente1 {
                     System.out.println(doServidorObj.readObject());
                 }
             }
-            else if (acao.equals("end")) {
-                System.out.println("Bye bye");
+            else if (acao.equals("fim")) {
+                System.out.println("Até mais");
                 socketCliente.close();
                 break;
             }
 
-            System.out.println("Wait for your oponent...");
+            System.out.println("Espere pelo seu oponente...");
         }
     }
 
