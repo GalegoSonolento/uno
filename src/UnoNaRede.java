@@ -13,7 +13,7 @@ import java.util.Scanner;
  *  Preciso fazer uma muleta pra próxima rodada entrar ou não no loop -> provavelmente fazer algo válido pro final e quando entrar na jogada do player 1 ou 2 ele zera
  * todo
  *  Fazer o jogo ser impossível de conmeçar com uma carta especial*/
-public class WebUnoRevisited
+public class UnoNaRede
 {
     public static void main(String[] args) throws Exception
     {
